@@ -3,49 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
-    <title>Bento Portfolio</title>
+    <title>Bento Layout</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-    <div class="flex flex-col md:flex-row">
-        <aside class="md:w-1/4 bg-white shadow md:fixed h-full md:h-auto">
-            <div class="p-4">
-                <img src="/path/to/profile-image.jpg" alt="Profile Image" class="rounded-full w-32 mx-auto">
-                <h1 class="text-center text-2xl font-bold mt-4">Your Name</h1>
-                <p class="text-center text-gray-600">Your Bio</p>
-
-                <nav class="mt-6">
-                    <h2 class="font-bold">Links</h2>
-                    <ul>
-                        <li><a href="#" class="text-blue-500">Link 1</a></li>
-                        <li><a href="#" class="text-blue-500">Link 2</a></li>
-                    </ul>
-                    <h2 class="font-bold mt-4">Social</h2>
-                    <ul>
-                        <li><a href="#" class="text-blue-500">Social 1</a></li>
-                        <li><a href="#" class="text-blue-500">Social 2</a></li>
-                    </ul>
-                    <h2 class="font-bold mt-4">Projects</h2>
-                    <ul>
-                        <li><a href="#" class="text-blue-500">Project 1</a></li>
-                    </ul>
-                    <h2 class="font-bold mt-4">Skills</h2>
-                    <ul>
-                        <li>Skill 1</li>
-                    </ul>
-                    <h2 class="font-bold mt-4">Contacts</h2>
-                    <ul>
-                        <li>Email: email@example.com</li>
-                    </ul>
-                </nav>
+<body>
+    <div class="flex flex-col lg:flex-row">
+        <!-- Sidebar -->
+        <aside class="lg:w-1/4 bg-gray-800 text-white p-4 fixed lg:static h-screen">
+            <div class="flex items-center mb-4">
+                <img src="path/to/profile-image.jpg" alt="Profile Image" class="w-16 h-16 rounded-full">
+                <div class="ml-4">
+                    <h2 class="text-xl font-bold">Your Name</h2>
+                    <p class="text-sm">Your Bio</p>
+                </div>
             </div>
+            <nav>
+                <ul>
+                    <li class="mb-2"><a href="#" class="text-blue-300">Link 1</a></li>
+                    <li class="mb-2"><a href="#" class="text-blue-300">Link 2</a></li>
+                    <li class="mb-2"><a href="#" class="text-blue-300">Link 3</a></li>
+                    <li class="mb-2"><a href="#" class="text-blue-300">Projects</a></li>
+                    <li class="mb-2"><a href="#" class="text-blue-300">Skills</a></li>
+                    <li><a href="#" class="text-blue-300">Contacts</a></li>
+                </ul>
+            </nav>
         </aside>
-        <main class="md:ml-1/4 p-4 overflow-auto">
-            <h1 class="text-3xl font-bold mt-4">Welcome to My Portfolio</h1>
-            <p>Here you can find my projects and skills.</p>
-            <div class="grid grid-cols-2 gap-4 mt-4">
-                <!-- Content goes here -->
-            </div>
+        <!-- Content -->
+        <main class="lg:w-3/4 lg:ml-1/4 p-4 overflow-y-auto">
+            <h1 class="text-2xl font-bold mb-4">Your Content</h1>
+            <section class="mb-4">
+                <h2 class="text-xl font-semibold">Projects</h2>
+                <p>Project details go here...</p>
+            </section>
+            <section class="mb-4">
+                <h2 class="text-xl font-semibold">Skills</h2>
+                <p>Skill details go here...</p>
+            </section>
+            <section class="mb-4">
+                <h2 class="text-xl font-semibold">Contact</h2>
+                <p>Contact information goes here...</p>
+            </section>
+            <section class="mb-4">
+                <h2 class="text-xl font-semibold">Social Links</h2>
+                <p>Social links go here...</p>
+            </section>
         </main>
     </div>
 </body>
