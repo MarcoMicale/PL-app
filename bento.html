@@ -1,51 +1,52 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            display: flex;
-            height: 100vh;
-        }
-        .sidebar {
-            width: 250px;
-            background-color: #f4f4f4;
-            padding: 15px;
-            position: fixed;
-            height: 100%;
-            overflow: auto;
-        }
-        .content {
-            margin-left: 260px;
-            padding: 15px;
-            overflow-y: scroll;
-            height: calc(100vh - 30px);
-        }
-        @media (max-width: 768px) {
-            .sidebar {
-                position: static;
-                width: 100%;
-                height: auto;
-            }
-            .content {
-                margin-left: 0;
-                height: auto;
-            }
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.0/dist/tailwind.min.css" rel="stylesheet">
+    <title>Bento Portfolio</title>
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Sidebar</h2>
-            <p>Sidebar content goes here.</p>
-        </div>
-        <div class="content">
-            <h1>Content Area</h1>
-            <p>Content goes here. This area should be scrollable.</p>
-        </div>
+<body class="bg-gray-100">
+    <div class="flex flex-col md:flex-row">
+        <aside class="md:w-1/4 bg-white shadow md:fixed h-full md:h-auto">
+            <div class="p-4">
+                <img src="/path/to/profile-image.jpg" alt="Profile Image" class="rounded-full w-32 mx-auto">
+                <h1 class="text-center text-2xl font-bold mt-4">Your Name</h1>
+                <p class="text-center text-gray-600">Your Bio</p>
+
+                <nav class="mt-6">
+                    <h2 class="font-bold">Links</h2>
+                    <ul>
+                        <li><a href="#" class="text-blue-500">Link 1</a></li>
+                        <li><a href="#" class="text-blue-500">Link 2</a></li>
+                    </ul>
+                    <h2 class="font-bold mt-4">Social</h2>
+                    <ul>
+                        <li><a href="#" class="text-blue-500">Social 1</a></li>
+                        <li><a href="#" class="text-blue-500">Social 2</a></li>
+                    </ul>
+                    <h2 class="font-bold mt-4">Projects</h2>
+                    <ul>
+                        <li><a href="#" class="text-blue-500">Project 1</a></li>
+                    </ul>
+                    <h2 class="font-bold mt-4">Skills</h2>
+                    <ul>
+                        <li>Skill 1</li>
+                    </ul>
+                    <h2 class="font-bold mt-4">Contacts</h2>
+                    <ul>
+                        <li>Email: email@example.com</li>
+                    </ul>
+                </nav>
+            </div>
+        </aside>
+        <main class="md:ml-1/4 p-4 overflow-auto">
+            <h1 class="text-3xl font-bold mt-4">Welcome to My Portfolio</h1>
+            <p>Here you can find my projects and skills.</p>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+                <!-- Content goes here -->
+            </div>
+        </main>
     </div>
 </body>
 </html>
